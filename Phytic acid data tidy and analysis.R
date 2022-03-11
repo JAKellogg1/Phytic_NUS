@@ -1,5 +1,5 @@
 # set working drive, personal mac
-setwd("/Users/juliannekellogg/Documents/2. Ecuador Research/6_Data analysis_all outcomes/Ecuador Phytic Acid Analysis/Data as csv")
+setwd("___") #Edit for your working drive
 
 # load packages
 library(tidyverse) # data tidying, subsetting, transformations, etc.
@@ -32,12 +32,12 @@ pal_okabe_ito_3_light <- pal_okabe_ito[c(1,2,7)]
 pal_okabe_ito_4 <- pal_okabe_ito[c(5,6,7,2)]
 
 # reads your CSV files
-gels<-read.csv("Kellogg_phyticacid_ecuador_quantified gels_alldata_raw.csv", header=T, na.strings=c("","NA"))
+gels<-read.csv("_____.csv", header=T, na.strings=c("","NA")) #Add raw data file
 head(gels)
 gels<-select(gels, sample_id, crop, sample.weight, ext.rep, gel.rep, ip6.ug, notes)
 head(gels)
 
-lodloq<-read.csv("LODLOQ_wheat903_1_23_22_gel1.csv", header=T)  # Data for determining LOD and LOQ
+lodloq<-read.csv("____.csv", header=T)  # Raw data file for samples that were assayed to determine LOD and LOQ
 head(lodloq)
 lodloq<-select(lodloq, Lane, abs.quant)
 head(lodloq)
